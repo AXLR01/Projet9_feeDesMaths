@@ -73,21 +73,21 @@ const Routing = ()=>{
 function App() {
   const [state, dispatch]= useReducer(reducer, initialState)
   return (
+    <div class="col-12">
     <UserContext.Provider value={{state, dispatch}}>
       <BrowserRouter>
         {/* HEADER */}
         <Header />
         <NavBar />                {/* */}
-
         {/*Body*/}                {/*visible que si login*/}
         <Routing />
-        
         {/* FOOTER 
           Ajouter Information en footer et non en navbar
         */}
         <Footer/>
       </BrowserRouter>
     </UserContext.Provider>
+    </div>
   );
 }
 
